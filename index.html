@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>My Weekly Progress</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Chart.js"></script>
+        <link rel="stylesheet" href="mainStyle.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+        <div id="header">My Weekly Progress</div>
+        <br>
+        <div id="main">
+            Write how many things you do every day:
+            <br>
+            Monday:      
+            <input type="number" class="in" id="mon" value="3" onclick="updateChart('mon')" onkeyup="updateChart('mon')"/>
+            <br>
+            Tuesday: 
+            <input type="number" class="in" id="tue" value="2" onclick="updateChart('tue')" onkeyup="updateChart('tue')"/>
+            <br>
+            Wednesday: 
+            <input type="number" class="in" id="wed" value="4" onclick="updateChart('wed')" onkeyup="updateChart('wed')"/>
+            <br>
+            Thursday: 
+            <input type="number" class="in" id="thu" value="5" onclick="updateChart('thu')" onkeyup="updateChart('thu')"/>
+            <br>
+            Friday: 
+            <input type="number" class="in" id="fri" value="0" onclick="updateChart('fri')" onkeyup="updateChart('fri')"/>
+            <br>
+            Saturday: 
+            <input type="number" class="in" id="sat" value="6" onclick="updateChart('sat')" onkeyup="updateChart('sat')"/>
+            <br>
+            Sunday: 
+            <input type="number" class="in" id="sun" value="2" onclick="updateChart('sun')" onkeyup="updateChart('sun')"/>
+            <br>
+        </div>
+        <canvas id="myChart" width="1200" height="400"></canvas>
+        <script src="chartData.js"></script>
+        <div id="footer">
+            Created by Urszula Frątczak
+            <br>
+            Powered by <a href="http://www.chartjs.org/">Chart.js</a>
+        </div>
+    </body>
+</html>
