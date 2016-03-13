@@ -1,12 +1,21 @@
+/*
+ *	settings of margin and padding for all elements 
+ */
 * {
 	margin: 0px;
 	padding: 0px;
 }
 
+/*
+ *	set body background color 
+ */
 body{
 	background-color: #F8F8F7;
 }
 
+/*
+ * 	set of height, font, background color for div with id = 'header'
+ */
 #header {
 	height: 60px;
 	font-family: 'Lobster', cursive;
@@ -16,6 +25,9 @@ body{
 	padding-top: 10px;
 }
 
+/*
+ * 	set of height, font, background color for div with id = 'footer'
+ */
 #footer {
 	height: 35px;
 	padding-top: 5px;
@@ -26,20 +38,29 @@ body{
 	background-color: #C0DFD9;
 }
 
+/*
+ * 	set of font size and style for div with id = 'main'
+ */ 
 #main {
 	font-family: 'Lobster', cursive;
 	font-size: 16px;
 	margin-left: 5%;
-	/*text-align: center;*/
 }
 
-#myChart {
-	margin-left: 5%;
-	margin-bottom: 5%;
-}
-
-.in {
+/*	
+ *	set font size and style for all input
+ *	set input width 
+ */
+.in {                    
 	font-family: 'Lobster', cursive;
 	font-size: 16px;
 	width: 38px;
+}
+
+/*	
+ * 	margin of canvas, where is a line chart	
+ */
+#myChart {
+	margin-left: 5%;
+	margin-bottom: 5%;
 }

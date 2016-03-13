@@ -1,21 +1,18 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-var c = document.getElementById("myChart");
-var ctx = c.getContext("2d");
+var c = document.getElementById("myChart"); // get chart element
+var ctx = c.getContext("2d");				// get 2d context
 
-    var mon = document.getElementById('mon').value;
-    var tue = document.getElementById('tue').value;
-    var wed = document.getElementById('wed').value;
-    var thu = document.getElementById('thu').value;
-    var fri = document.getElementById('fri').value;
-    var sat = document.getElementById('sat').value;
-    var sun = document.getElementById('sun').value;
+/* get data from all input */
+var mon = document.getElementById('mon').value;
+var tue = document.getElementById('tue').value;
+var wed = document.getElementById('wed').value;
+var thu = document.getElementById('thu').value;
+var fri = document.getElementById('fri').value;
+var sat = document.getElementById('sat').value;
+var sun = document.getElementById('sun').value;
 
-    var data = {
-        labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+/* set all char data */
+var data = {
+		labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         datasets: [
             {
                 label: "My Third dataset",
@@ -28,10 +25,12 @@ var ctx = c.getContext("2d");
                 data: [mon, tue, wed, thu, fri, sat, sun]
             }
         ]
-    };
+};
 
-    var myLineChart = new Chart(ctx).Line(data);       
+/* create chart, function from Chart.js*/
+var myLineChart = new Chart(ctx).Line(data);       
 
+/* function change chart data when input is change */
 function updateChart(id){
     var number;
     var value;
@@ -65,11 +64,11 @@ function updateChart(id){
             number = 6; 
             break;
     }
+    
     if(isNaN(value) || value=='')
         value=0;
     myLineChart.datasets[0].points[number].value = value;
-    myLineChart.update();
-
+    myLineChart.update();   /* function chart.js causing update data */
 }
 
 
